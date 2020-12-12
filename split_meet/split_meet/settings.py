@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'split_meet.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'split_meet',
+        'NAME': 'split_meet_01',
         'USER': 'postgres',
         'PASSWORD': 'our_server@***',
         'HOST': '107.174.35.243',
