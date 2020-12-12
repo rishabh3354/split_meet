@@ -265,6 +265,11 @@ body {
 .form-title {
   margin-bottom: 33px; }
 
+ .form-welcome {
+  text-align:center;
+  color:#6dabe4;
+   }
+
 .signup-image {
   margin-top: 45px; }
 
