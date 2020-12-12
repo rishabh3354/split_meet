@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 def signup_user(request):
     context = {}
-    return render(request, 'signup_page.html', context)
+    return render(request, 'index_sign_up.html', context)
 
 
 def login_user(request):
@@ -18,4 +18,4 @@ def logout_view(request):
 
 def home(request):
     context = {}
-    return render(request, 'signup_page.html', context)
+    return render(request, 'index.html', context)

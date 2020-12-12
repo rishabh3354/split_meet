@@ -57,13 +57,14 @@ ROOT_URLCONF = 'split_meet.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'template')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.static',
                 'django.contrib.messages.context_processors.messages',
             ],
         },
@@ -71,7 +72,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'split_meet.wsgi.application'
-
+STATIC_ROOT = os.path.join(BASE_DIR + '/static/')
+STATIC_URL = '/static/'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -119,9 +121,3 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.2/howto/static-files/
-
-STATIC_URL = '/static/'
