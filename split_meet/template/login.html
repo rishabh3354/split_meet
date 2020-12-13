@@ -18,16 +18,17 @@
     <div class="main">
         <section class="sign-in">
             <div class="container">
-                <h2 class="form-welcome">Welcome To Split Meet</h2>
+                <h2 class="form-welcome"><a href="/" style="text-decoration:none;color : #000000;">Welcome To Split Meet</h2>
                 <div class="signin-content">
                     <div class="signin-image">
                         <figure><img src="{% static 'images/signin-image.jpg' %}" alt="sing up image"></figure>
-                        <a href="/signup_user/" class="signup-image-link">Create an account</a>
+                        <a href="/signup/" class="signup-image-link">Create an account</a>
                     </div>
 
                     <div class="signin-form">
                         <h2 class="form-title">Sign In </h2>
                         <form method="POST" class="register-form" id="login-form">
+                            {% csrf_token %}
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="your_email" id="your_email" placeholder="Your Email"/>
