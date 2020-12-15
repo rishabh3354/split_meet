@@ -20,14 +20,19 @@
         <!-- Sign up form -->
         <section class="signup">
             <div class="container">
-                <h2 class="form-welcome"><a href="/" style="text-decoration:none;color : #000000;">Welcome To Split Meet</h2>
+                <h2 class="form-welcome"><a href="/" style="text-decoration:none;color : #000000;">Welcome To Split Meet</a></h2>
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Sign Up</h2>
                         <form method="POST" class="register-form" id="register-form">
+                            {% csrf_token %}
                             <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="name" id="name" placeholder="Your Name"/>
+                                <label for="first_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="first_name" id="first_name" placeholder="First Name"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="last_name" id="last_name" placeholder="Last Name"/>
                             </div>
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
@@ -47,7 +52,8 @@
                             </div>
                             <div class="form-group form-button">
                                 <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
-                            </div>
+
+                            </div><span style="color: red">{{response}}</span>
                         </form>
                     </div>
                     <div class="signup-image">
@@ -60,5 +66,5 @@
     <!-- JS -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
-</body><!-- This template was made by Colorlib (https://colorlib.com) -->
+</body>
 </html>
